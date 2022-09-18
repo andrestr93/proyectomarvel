@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "flats";
+  src: url("../fonts/dirty.ttf");
+}
+
+header {
+  font-family: flats;
+  width: 100%;
+  padding: 25px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  background-color: #2A272A;
+  color: white;
+
+
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+.item-article {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.image-wrap img {
+  max-width: 250px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  margin-left: 10px;
+}
+
+#search{
+
+  border: 1px solid black;
+  width: 50%;
+  margin: 0px auto;
+  margin-bottom: 10px;
+  background-color: #677381;
+}
+
+#search-letter h3 {
+  display: inline-block;
+}
+
+.clearfix {
+  clear: both;
+  float: none;
+}
+
+.container-footer {
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.container-footer p {
+  padding-left: 150px;
+}
+
+footer {
+  width: 100%;
+  border-top: 1px solid black;
+}
