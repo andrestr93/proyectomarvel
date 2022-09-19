@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Coctel } from '../models/coctel';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Global } from './global';
 
 @Injectable()
-export class CoctelService {
+export class PersonajeService {
 
   public url: string;
-  constructor( private _http: HttpClient ) {
+  constructor( private http: HttpClient ) {
 
       this.url = Global.url;
 
@@ -19,7 +18,8 @@ export class CoctelService {
   }
 
 
-  getCoctelesAlcohol():Observable<any>{
-    return this._http.get(this.url)
+  getPersonajesMarvel():Observable<any>{
+    return this.http.get(this.url);
+
   }
 }

@@ -1,21 +1,43 @@
 import { Component, OnInit } from '@angular/core';
-import { CoctelService } from 'src/app/services/cocteles.service';
+import { PersonajeService } from 'src/app/services/personajes.service';
+import { Personaje } from 'src/app/models/personaje';
 
 @Component({
   selector: 'app-section',
   templateUrl: './section.component.html',
   styleUrls: ['./section.component.css'],
-  providers: [CoctelService],
+  providers: [PersonajeService],
 })
 export class SectionComponent implements OnInit {
-  constructor(private _coctelService: CoctelService) {}
+
+  public personajes!:any[];
+
+
+
+  constructor(private PersonajeService: PersonajeService) {}
+
+
 
   ngOnInit(): void {
-    this._coctelService.getCoctelesAlcohol().subscribe(
+
+    this.PersonajeService.getPersonajesMarvel().subscribe(
       (response) => {
-        console.log(response)
+        if (response) {
+          this.personajes = response.data.results;
+          console.log(this.personajes);
+        } else {
+        }
       },
-      (error) => {}
+      (error) => {
+        console.log(error);
+      }
     );
+
+
+
+
+
+    console.log(this.personajes)
+
   }
 }
